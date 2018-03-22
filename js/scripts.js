@@ -3,16 +3,20 @@ $(document).ready(function() {
 
     event.preventDefault();
 
-    $(".ofAge").show();
-});
-    // var ageInput = $("input#age").val();
+    var ageInput = parseInt($("input#age").val());
 
-  //   if (ageInput >= 18) {
-  //     $(".ofAge").show();
-  //
-  //   } else {
-  //     $(".underAge").show();
-  //
-  //   }
-  //
+    if (ageInput >= 18) {
+      $(".ofAge").show();
+      $(".underAge").remove();
+
+    } else {
+      $(".underAge").show();
+      $("ofAge").remove();
+
+    } 
+
+    // $("button").hide();
+
+
   });
+});
